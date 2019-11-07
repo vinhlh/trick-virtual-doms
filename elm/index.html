@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="elm">
+	</div>
+  <script>
+  var app = Elm.Main.init({
+    node: document.getElementById('elm')
+	});
+
+	const trick = () => {
+		const p = document.createElement('p')
+		p.innerText = "Tricked!"
+		document.getElementById('container').insertBefore(p, document.getElementById('buttons'))
+	}
+	</script>
+	<a href="#" onClick="trick();">Trick Elm's virtual DOM by injecting additional DOM element</a>
+</body>
+</html>
